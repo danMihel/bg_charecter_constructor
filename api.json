@@ -1,0 +1,169 @@
+{
+    "race": [
+        {
+            "id": 1,
+            "icon": "https://bg3.wiki/w/images/thumb/e/ec/Race_Elf.png/100px-Race_Elf.png",
+            "name": "Эльф",
+            "features": {
+                "speed": {
+                    "name": "Стандартная",
+                    "value": 9
+                },
+                "weapon": [
+                    "Длинный мечь",
+                    "Короткий мечь",
+                    "Длинный лук",
+                    "Короткий лук"
+                ],
+                "raseFeatures": [
+                    {
+                        "name": "Темное зрение",
+                        "description": "Darkvision is a passive feature that prevents Disadvantage Icon.png Disadvantage when attacking creatures in the dark within  12 m / 40 ft,  24 m / 80 ft for Superior Darkvision Superior Darkvision."
+                    }
+                ]
+            },
+            "subrase": {
+                "HighElf": {},
+                "WoodElf": {}
+            }
+        },
+        {
+            "id": 2,
+            "icon": "https://bg3.wiki/w/images/thumb/6/6c/Race_Human.png/100px-Race_Human.png",
+            "name": "Человек",
+            "features": {
+                "speed": 9,
+                "weapon": [],
+                "raseFeatures": [
+                    {
+                        "name": "Darkvision",
+                        "description": "Darkvision is a passive feature that prevents Disadvantage Icon.png Disadvantage when attacking creatures in the dark within  12 m / 40 ft,  24 m / 80 ft for Superior Darkvision Superior Darkvision."
+                    }
+                ]
+            },
+            "subrase": {
+                "HighElf": {},
+                "WoodElf": {}
+            }
+        }
+    ],
+    "classes": [
+        {
+            "id": 1,
+            "name": "Warloc",
+            "icon": "https://bg3.wiki/w/images/thumb/e/ec/Race_Elf.png/100px-Race_Elf.png"
+        }
+    ],
+    "background": [
+        {
+            "id": 1,
+            "name": "Послушник",
+            "icon": "https://bg3.wiki/w/images/thumb/2/2f/Background_Acolyte_Icon.png/180px-Background_Acolyte_Icon.png",
+            "description": "Вы провели свою жизнь в храме, изучая священные тексты и принося жертвы божеству или божествам, которым поклоняетесь. Служение богам и созерцание дел их рук ведут вас к новым свершениям.",
+            "skils": [
+                "Проницательность",
+                "Религия"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Шарлатан",
+            "icon": "https://bg3.wiki/w/images/thumb/2/29/Background_Charlatan_Icon.png/180px-Background_Charlatan_Icon.png",
+            "description": "Вы эксперт в манипуляциях, склонны к преувеличениям и более чем счастливы извлечь из этого выгоду. Искажение правды и настраивание союзников друг против друга приведут к большему успеху в будущем.",
+            "skils": [
+                "Обман",
+                "Ловкость рук"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Преступник",
+            "icon": "https://bg3.wiki/w/images/thumb/6/68/Background_Criminal_Icon.png/180px-Background_Criminal_Icon.png",
+            "description": "У вас есть опыт нарушения закона и выживания, используя нелегальные связи. Прибыль от преступного бизнеса приведет к большим возможностям в будущем",
+            "skils": [
+                "Обман",
+                "Скрытность"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Артист",
+            "icon": "https://bg3.wiki/w/images/thumb/c/c2/Background_Entertainer_Icon.png/180px-Background_Entertainer_Icon.png",
+            "description": "Вы живете, чтобы влиять и ниспровергать свою аудиторию, привлекая как простых людей, так и высшее общество. Сохранение искусства и принесение радости несчастным и угнетенным усиливает вашу харизматическую ауру",
+            "skils": [
+                "Обман",
+                "Скрытность"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Народный герой",
+            "icon": "https://bg3.wiki/w/images/thumb/e/ec/Background_Folk_Hero_Icon.png/180px-Background_Folk_Hero_Icon.png",
+            "description": "Вы — защитник простых людей, бросающий вызов тиранам и монстрам, чтобы защитить беспомощных. Спасение невинных людей, находящихся в непосредственной опасности, сделает вашу легенду еще более популярной",
+            "skils": [
+                "Обращение с животными",
+                "Выживание"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Ремесленник",
+            "icon": "https://bg3.wiki/w/images/thumb/3/3d/Background_Guild_Artisan_Icon.png/180px-Background_Guild_Artisan_Icon.png",
+            "description": "Ваши навыки в определенном ремесле позволили вам стать членом торговой гильдии, предлагающей привилегии и защиту во время занятий вашим искусством. Ремонт и открытие редких ремесел принесут новое вдохновение",
+            "skils": [
+                "Проницательность",
+                "Убеждение"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Аристократ ",
+            "icon": "https://bg3.wiki/w/images/thumb/b/b7/Background_Noble_Icon.png/180px-Background_Noble_Icon.png",
+            "description": "Вы выросли в семье из высшего света и с детства привыкли к роскоши и власти. Стяжая славу, власть и преданность других, вы еще выше поднимаетесь в собственных глазах.",
+            "skils": [
+                "Проницательность",
+                "Убеждение"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Скиталец",
+            "icon": "https://bg3.wiki/w/images/thumb/b/bf/Background_Outlander_Icon.png/180px-Background_Outlander_Icon.png",
+            "description": "Вы выросли в дикой природе и научились выживать вдали от удобств цивилизации. Выживание в необычных опасностях дикой природы повысит ваше мастерство и понимание",
+            "skils": [
+                "Атлетика",
+                "Выживание"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Мудрец",
+            "icon": "https://bg3.wiki/w/images/thumb/2/2e/Background_Sage_Icon.png/180px-Background_Sage_Icon.png",
+            "description": "Вы любопытны и начитаны, с бесконечной жаждой знаний. Изучение редких знаний мира вдохновит вас использовать эти знания для более великих целей",
+            "skils": [
+                "Аркана",
+                "История"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Солдат",
+            "icon": "https://bg3.wiki/w/images/thumb/b/ba/Background_Soldier_Icon.png/180px-Background_Soldier_Icon.png",
+            "description": "Вы обучены тактике боя и бою, пройдя службу в ополчении, роте наемников или офицерском корпусе. Проявите умную тактику и храбрость на поле боя, чтобы повысить свое мастерство",
+            "skils": [
+                "Аркана",
+                "История"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Бродяга",
+            "icon": "https://bg3.wiki/w/images/thumb/3/39/Background_Urchin_Icon.png/180px-Background_Urchin_Icon.png",
+            "description": "Вы выросли в нищете и голоде. Вы умеете довольствоваться малым - ведь зачастую у вас не было и этого. Умело ориентируясь в законах улицы, вы исполняетесь уверенности в своем будущем.",
+            "skils": [
+                "Ловкость рук",
+                "Скрытность"
+            ]
+        }
+    ]
+}
