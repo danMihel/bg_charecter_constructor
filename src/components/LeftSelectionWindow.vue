@@ -6,8 +6,6 @@ defineProps<{
   db: Array<Race | Classes | Background> | null 
   tab: string
 }>();
-
-
 </script>
 
 <template>
