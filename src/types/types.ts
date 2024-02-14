@@ -9,6 +9,7 @@ export interface Race {
     name?: string,
     features?: object,
     subrase?: object,
+    description?: string,
 }
 export interface Classes {
     id: number,

@@ -16,8 +16,11 @@ let backgroundToShow = ref<string | undefined>('')
 
 watch(() => props.tab, (newValue) => {
   if (newValue === 'background') {
+    backgroundToShow.value = background.value?.description
     selectedItemId.value = background.value?.id
-  }if (newValue === 'race') {
+  }
+  if (newValue === 'race') {
+    backgroundToShow.value = race.value?.description
     selectedItemId.value = race.value?.id
   }
 }); 

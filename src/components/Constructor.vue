@@ -58,6 +58,7 @@ const filterDataBase = (tabs: string) => {
       break
   }
 }
+let selectedItemId = ref<string | undefined>('background')
 
 onMounted(() => {
   chosenTab.value = menuList[0].id
@@ -70,7 +71,7 @@ onMounted(() => {
     <div class="main-wraper">
       <div class="left-wraper">
         <ul>
-          <li @click="filterDataBase(item.id)" v-for="item in menuList" :key="item.id">{{ item.name }}</li>
+          <li @click="filterDataBase(item.id); selectedItemId =item.id" v-for="item in menuList" :key="item.id" :class="{ 'selected': item.id === selectedItemId }">{{ item.name }} </li>
         </ul>
         <LeftSelectionWindow :db="filteredDataBase" :tab="chosenTab" />
       </div>
@@ -92,7 +93,9 @@ ul {
   gap: 14px;
   list-style: none;
   border: 1px solid gray;
-
+  .selected {
+      border: 2px solid gold;
+    }
   li:hover {
     cursor: pointer;
   }
