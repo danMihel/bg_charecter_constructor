@@ -80,5 +80,6 @@ const onImgClick = (item: Background | Race, currentTab: string) => {
   margin: 0 auto;
   text-align: center;
   margin-top: 14px;
+  margin-bottom: 30px;
 }
 </style>
