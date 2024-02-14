@@ -9,10 +9,14 @@ const props = defineProps<{
   db: Array<Background> | null
   tab: string
 }>();
+
 const background = buildStore.getBackground
+
 const race = buildStore.getRace
-let selectedItemId = ref<number | undefined>()
-let backgroundToShow = ref<string | undefined>('')
+
+const selectedItemId = ref<number | undefined>()
+
+const backgroundToShow = ref<string | undefined>('')
 
 watch(() => props.tab, (newValue) => {
   if (newValue === 'background') {
@@ -23,7 +27,7 @@ watch(() => props.tab, (newValue) => {
     backgroundToShow.value = race.value?.description
     selectedItemId.value = race.value?.id
   }
-}); 
+});
 
 const onImgClick = (item: Background | Race, currentTab: string) => {
   if (currentTab === 'background') {

@@ -31,8 +31,8 @@ const menuList: Array<{ id: string, name: string }> = [
    } */
 ]
 
-let chosenTab = ref<string>('');
-let filteredDataBase = ref<(Race | Classes | Background)[] | null>(null)
+const chosenTab = ref<string>('');
+const filteredDataBase = ref<(Race | Classes | Background)[] | null>(null)
 
 const filterDataBase = (tabs: string) => {
   switch (tabs) {
@@ -71,7 +71,8 @@ onMounted(() => {
     <div class="main-wraper">
       <div class="left-wraper">
         <ul>
-          <li @click="filterDataBase(item.id); selectedItemId =item.id" v-for="item in menuList" :key="item.id" :class="{ 'selected': item.id === selectedItemId }">{{ item.name }} </li>
+          <li @click="filterDataBase(item.id); selectedItemId = item.id" v-for="item in menuList" :key="item.id"
+            :class="{ 'selected': item.id === selectedItemId }">{{ item.name }} </li>
         </ul>
         <LeftSelectionWindow :db="filteredDataBase" :tab="chosenTab" />
       </div>
@@ -83,7 +84,8 @@ onMounted(() => {
 <style scoped lang="scss">
 .main-wraper {
   display: flex;
-  .left-wraper{
+
+  .left-wraper {
     width: 50%
   }
 }
@@ -93,9 +95,11 @@ ul {
   gap: 14px;
   list-style: none;
   border: 1px solid gray;
+
   .selected {
-      border: 2px solid gold;
-    }
+    border: 2px solid gold;
+  }
+
   li:hover {
     cursor: pointer;
   }
@@ -103,5 +107,4 @@ ul {
 
 img {
   background-color: black;
-}
-</style>
+}</style>
