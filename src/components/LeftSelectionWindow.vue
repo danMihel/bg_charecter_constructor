@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import type {Race, Classes, Background} from '@/types/types.ts'
-import  BackgroundTab from '@/components/BackgroundTab.vue';
+import  SelectionTable from '@/components/SelectionTable.vue';
 
 defineProps<{
   db: Array<Race | Classes | Background> | null 
   tab: string
 }>();
+
+
 </script>
 
 <template>
   <div v-if="db">
-    <BackgroundTab v-if="tab === 'background'" :tab="tab" :db="db"/>
+    <SelectionTable v-if="tab === 'background' || 'race'" :tab="tab" :db="db"/>
   </div>
 </template>
   

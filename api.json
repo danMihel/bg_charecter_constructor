@@ -4,6 +4,7 @@
             "id": 1,
             "icon": "https://bg3.wiki/w/images/thumb/e/ec/Race_Elf.png/100px-Race_Elf.png",
             "name": "Эльф",
+            "description": "Неземное спокойствие, долгая жизнь - вот главные особенности эльфов. Эльфы наделены силой природы и прекрасно чувствуют себя и во тьме, и при ярком свете дня.",
             "features": {
                 "speed": {
                     "name": "Стандартная",
@@ -18,7 +19,15 @@
                 "raseFeatures": [
                     {
                         "name": "Темное зрение",
-                        "description": "Darkvision is a passive feature that prevents Disadvantage Icon.png Disadvantage when attacking creatures in the dark within  12 m / 40 ft,  24 m / 80 ft for Superior Darkvision Superior Darkvision."
+                        "description": "Видит в темноте на 12 м"
+                    },
+                    {
+                        "name": "Эльфийская оружейная подготовка",
+                        "description": "Вы умело обращаетесь с длинным и коротким мечом, коротким и длинным луком."
+                    },
+                    {
+                        "Наследие фей ": "Эльфийская оружейная подготовка",
+                        "description": "Вы получаете преимущество при испытаниях против обворожения, а магические чары не способны погрузить вас в сон."
                     }
                 ]
             },
@@ -31,13 +40,23 @@
             "id": 2,
             "icon": "https://bg3.wiki/w/images/thumb/6/6c/Race_Human.png/100px-Race_Human.png",
             "name": "Человек",
+            "description": "Люди - самая распространенная раса в Фаэруне. Они настойчивы, изобретательны и очень плодовиты.",
             "features": {
-                "speed": 9,
-                "weapon": [],
+                "speed": 9,               
+                "weapon": [
+                    "Копья",
+                    "Пики",
+                    "Алебарда",
+                    "Глефы"
+                ],
                 "raseFeatures": [
                     {
-                        "name": "Darkvision",
-                        "description": "Darkvision is a passive feature that prevents Disadvantage Icon.png Disadvantage when attacking creatures in the dark within  12 m / 40 ft,  24 m / 80 ft for Superior Darkvision Superior Darkvision."
+                        "name": "Человек-ополченец",
+                        "description": "У вас есть умение обращаться с оружием: копьями, пиками, алебардами и глефами; а также умение обращаться с легкой броней и щитами."
+                    },
+                    {
+                        "name": "Универсальность человека",
+                        "description": "Выберите дополнительный навык, в котором у вас будет умение. Ваша грузоподъемность увеличивается на четверть."
                     }
                 ]
             },
