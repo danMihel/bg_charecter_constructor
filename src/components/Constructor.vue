@@ -17,13 +17,13 @@ const menuList: Array<{ id: string, name: string }> = [
     id: 'race',
     name: "Расса"
   },
-  /* {
-     id: 'cantrips',
-     name: "Фокусы",
-   },
    {
      id: 'classes',
      name: "Класс",
+   },
+  /* {
+     id: 'cantrips',
+     name: "Фокусы",
    },
    {
      id: 'skills',

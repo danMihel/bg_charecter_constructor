@@ -92,16 +92,95 @@
         ]
       },
       "subrase": {
-        "HighElf": {},
-        "WoodElf": {}
+        "Lolth-swornDrow": {},
+        "SeldarineDrow": {}
+      }
+    },
+    {
+      "id": 4,
+      "icon": "https://bg3.wiki/w/images/thumb/d/dd/Race_Half-Elf.png/100px-Race_Half-Elf.png",
+      "name": "Полуэльф",
+      "description": "Полуэльфы любопытны, честолюбивы, талантливы. Им везде рады, но у них нет ни родины, ни общины, поэтому порой им приходится трудно.",
+      "features": {
+        "speed": {
+          "name": "Стандартная",
+          "value": 9
+        },
+        "weapon": [
+          "Копья",
+          "Пики",
+          "Алебарда",
+          "Глефы"
+        ],
+        "raseFeatures": [
+          {
+            "name": "Ночное зрение",
+            "description": "Видит в темноте на 12 м"
+          },
+          {
+            "name": "Человек-ополченец",
+            "description": "У вас есть умение обращаться с оружием: копьями, пиками, алебардами и глефами; а также умение обращаться с легкой броней и щитами."
+          },
+          {
+            "name": "Наследие фей",
+            "description": "Вы получаете преимущество при испытаниях против обворожения, а магические чары не способны погрузить вас в сон."
+          }
+        ]
+      },
+      "subrase": {
+        "HighHalf-elves": {},
+        "WoodHalf-elves": {},
+        "DrowHalf-elves": {}
+      }
+    },
+    {
+      "id": 5,
+      "icon": "https://bg3.wiki/w/images/thumb/a/ad/Race_Half-Orc.png/160px-Race_Half-Orc.png",
+      "name": "Полуорк",
+      "description": "Полуорки живут сильными эмоциями и скорее склонны действовать, чем думать - ярость ли пылает в их жилах, требуя выхода в схватке, или любовь наполняет их сердца, побуждая к невероятно добрым поступкам.",
+      "features": {
+        "speed": {
+          "name": "Стандартная",
+          "value": 9
+        },
+        "weapon": [],
+        "raseFeatures": [
+          {
+            "name": "Ночное зрение",
+            "description": "Видит в темноте на 12 м"
+          },
+          {
+            "name": "Несгибаемая стойкость",
+            "description": "Когда у вас остается 0 ОЗ, вы не оказываетесь при смерти, а восстанавливаете 1 ОЗ."
+          },
+          {
+            "name": "Яростные атаки",
+            "description": "Когда вы атакуете и проводите критический удар оружием в ближнем бою, вы наносите дополнительный кубик урона оружием."
+          }
+        ]
+      },
+      "subrase": {
+        "HighHalf-elves": {},
+        "WoodHalf-elves": {},
+        "DrowHalf-elves": {}
       }
     }
   ],
   "classes": [
     {
       "id": 1,
-      "name": "Warloc",
-      "icon": "https://bg3.wiki/w/images/thumb/e/ec/Race_Elf.png/100px-Race_Elf.png"
+      "name": "Варвар",
+      "icon": "https://bg3.wiki/w/images/thumb/4/41/Class_Barbarian_Badge_Icon.png/120px-Class_Barbarian_Badge_Icon.png"
+    },
+    {
+      "id": 2,
+      "name": "Бард",
+      "icon": "https://bg3.wiki/w/images/thumb/3/38/Class_Bard_Badge_Icon.png/120px-Class_Bard_Badge_Icon.png"
+    },
+    {
+      "id": 3,
+      "name": "Жрец",
+      "icon": "https://bg3.wiki/w/images/thumb/a/ac/Class_Cleric_Badge_Icon.png/120px-Class_Cleric_Badge_Icon.png"
     }
   ],
   "background": [

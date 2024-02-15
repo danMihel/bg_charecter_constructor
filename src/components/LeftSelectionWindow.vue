@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <div v-if="db">
-    <SelectionTable v-if="tab === 'background' || 'race'" :tab="tab" :db="db"/>
+    <SelectionTable :tab="tab" :db="db"/>
   </div>
 </template>
   

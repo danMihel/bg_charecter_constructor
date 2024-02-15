@@ -14,6 +14,9 @@ export const useBuildStore = defineStore('buildStore', () => {
   const getRace = computed(() => {
     return race
   })
+  const getСlasses = computed(() => {
+    return classes
+  })
 
   const setBackground = (value: Background) => {
     if (value === undefined) return
@@ -24,11 +27,18 @@ export const useBuildStore = defineStore('buildStore', () => {
     if (value === undefined) return
     race.value = value
   }
+  
+  const setСlasses = (value: Race) => {
+    if (value === undefined) return
+    classes.value = value
+  }
 
   return {
     getBackground,
     getRace,
+    getСlasses,
     setBackground,
-    setRace
+    setRace,
+    setСlasses
   }
 })

@@ -14,6 +14,8 @@ const background = buildStore.getBackground
 
 const race = buildStore.getRace
 
+const classes = buildStore.getСlasses
+
 const selectedItemId = ref<number | undefined>()
 
 const backgroundToShow = ref<string | undefined>('')
@@ -27,6 +29,10 @@ watch(() => props.tab, (newValue) => {
     backgroundToShow.value = race.value?.description
     selectedItemId.value = race.value?.id
   }
+  if (newValue === 'classes') {
+    backgroundToShow.value = classes.value?.description
+    selectedItemId.value = classes.value?.id
+  }
 });
 
 const onImgClick = (item: Background | Race, currentTab: string) => {
@@ -35,6 +41,9 @@ const onImgClick = (item: Background | Race, currentTab: string) => {
   }
   if (currentTab === 'race') {
     buildStore.setRace(item)
+  }
+  if (currentTab === 'classes') {
+    buildStore.setСlasses(item)
   }
 }
 </script>
