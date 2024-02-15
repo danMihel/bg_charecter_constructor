@@ -35,7 +35,7 @@ watch(() => props.tab, (newValue) => {
   }
 });
 
-const onImgClick = (item: Background | Race, currentTab: string) => {
+const onImgClick = (item: Background | Race | Classes, currentTab: string) => {
   if (currentTab === 'background') {
     buildStore.setBackground(item)
   }
