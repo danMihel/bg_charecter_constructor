@@ -10,11 +10,11 @@ const props = defineProps<{
   tab: string
 }>();
 
-const background = buildStore.getBackground
+const background = buildStore.getBackground.value
 
-const race = buildStore.getRace
+const race = buildStore.getRace.value
 
-const classes = buildStore.getСlasses
+const classes = buildStore.getСlasses.value
 
 const selectedItemId = ref<number | undefined>()
 
@@ -22,24 +22,24 @@ const backgroundToShow = ref<string | undefined>('')
 
 watch(() => props.tab, (newValue) => {
   if (newValue === 'background') {
-    backgroundToShow.value = background.value?.description
-    selectedItemId.value = background.value?.id
+    backgroundToShow.value = background?.description
+    selectedItemId.value = background?.id
   }
   if (newValue === 'race') {
-    backgroundToShow.value = race.value?.description
-    selectedItemId.value = race.value?.id
+    backgroundToShow.value = race?.description
+    selectedItemId.value = race?.id
   }
   if (newValue === 'classes') {
-    backgroundToShow.value = classes.value?.description
-    selectedItemId.value = classes.value?.id
+    backgroundToShow.value = classes?.description
+    selectedItemId.value = classes?.id
   }
 });
 
-const onImgClick = (item: Background | Race | Classes, currentTab: string) => {
+const onImgClick = (item: Background | Race | Classes, currentTab: string):void => {
   if (currentTab === 'background') {
     buildStore.setBackground(item)
   }
-  if (currentTab === 'race') {
+  if (currentTab === 'race') { 
     buildStore.setRace(item)
   }
   if (currentTab === 'classes') {
