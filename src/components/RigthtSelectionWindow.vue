@@ -12,6 +12,11 @@ const classes = buildStore.getСlasses
   <div>
     <p>Происхождение: {{ background?.name || "По выбору" }}</p>
     <p>Расса: {{ race?.name || "По выбору" }}</p>
+    <p> {{race?.description }}</p>
+    <div>
+      <span>Оружие: </span>
+      <span v-for="item in race?.features.weapon">{{item}},&nbsp</span>
+    </div>
     <p>Класс: {{ classes?.name || "По выбору" }}</p>
   </div>
 </template>

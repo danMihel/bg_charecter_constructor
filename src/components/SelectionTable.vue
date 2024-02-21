@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import type { Race, Classes, Background } from '@/types/types'
 
 import { useBuildStore } from '@/stores/store';
@@ -10,32 +10,26 @@ const props = defineProps<{
   tab: string
 }>();
 
-const background = buildStore.getBackground.value
-
-const race = buildStore.getRace.value
-
-const classes = buildStore.getСlasses.value
+const background =  buildStore.getBackground;
+const race = buildStore.getRace;
+const classes =  buildStore.getСlasses;
 
 const selectedItemId = ref<number | undefined>()
 
 const backgroundToShow = ref<string | undefined>('')
 
 watch(() => props.tab, (newValue) => {
-  switch (newValue) {
-    case 'background':
-      backgroundToShow.value = background?.description;
-      selectedItemId.value = background?.id;
-      break;
-    case 'race':
-      backgroundToShow.value = race?.description;
-      selectedItemId.value = race?.id;
-      break;
-    case 'classes':
-      backgroundToShow.value = classes?.description;
-      selectedItemId.value = classes?.id;
-      break;
-    default:
-      break;
+  if (newValue === 'background') {
+    backgroundToShow.value = background.value?.description;
+    selectedItemId.value = background.value?.id;
+  }
+  if (newValue === 'race') {
+    backgroundToShow.value = race.value?.description;
+    selectedItemId.value = race.value?.id;
+  }
+  if (newValue === 'classes') {
+    backgroundToShow.value = classes.value?.description;
+    selectedItemId.value = classes.value?.id;
   }
 });
 
@@ -81,7 +75,7 @@ const onImgClick = (item: Background | Race | Classes, currentTab: string): void
      padding: 10px;
 
      .selected {
-       border: 2px solid gold;
+       border: 2px solid red;
      }
 
      img {

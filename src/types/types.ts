@@ -7,7 +7,7 @@ export interface Race {
     id: number,
     icon?: string,
     name?: string,
-    features?: object,
+    features?: any,
     subrase?: object,
     description?: string,
 }
