@@ -21,29 +21,37 @@ const selectedItemId = ref<number | undefined>()
 const backgroundToShow = ref<string | undefined>('')
 
 watch(() => props.tab, (newValue) => {
-  if (newValue === 'background') {
-    backgroundToShow.value = background?.description
-    selectedItemId.value = background?.id
-  }
-  if (newValue === 'race') {
-    backgroundToShow.value = race?.description
-    selectedItemId.value = race?.id
-  }
-  if (newValue === 'classes') {
-    backgroundToShow.value = classes?.description
-    selectedItemId.value = classes?.id
+  switch (newValue) {
+    case 'background':
+      backgroundToShow.value = background?.description;
+      selectedItemId.value = background?.id;
+      break;
+    case 'race':
+      backgroundToShow.value = race?.description;
+      selectedItemId.value = race?.id;
+      break;
+    case 'classes':
+      backgroundToShow.value = classes?.description;
+      selectedItemId.value = classes?.id;
+      break;
+    default:
+      break;
   }
 });
 
-const onImgClick = (item: Background | Race | Classes, currentTab: string):void => {
-  if (currentTab === 'background') {
-    buildStore.setBackground(item)
-  }
-  if (currentTab === 'race') { 
-    buildStore.setRace(item)
-  }
-  if (currentTab === 'classes') {
-    buildStore.setСlasses(item)
+const onImgClick = (item: Background | Race | Classes, currentTab: string): void => {
+  switch (currentTab) {
+    case 'background':
+      buildStore.setBackground(item);
+      break;
+    case 'race':
+      buildStore.setRace(item);
+      break;
+    case 'classes':
+      buildStore.setСlasses(item);
+      break;
+    default:
+      break;
   }
 }
 </script>
@@ -59,36 +67,35 @@ const onImgClick = (item: Background | Race | Classes, currentTab: string):void 
   <p class="description">{{ backgroundToShow }}</p>
 </template>
 
-<style scoped lang="scss">
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+<style scoped lang="scss"> .grid-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
 
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f2f2f2;
-    padding: 10px;
+   .grid-item {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #f2f2f2;
+     padding: 10px;
 
-    .selected {
-      border: 2px solid gold;
-    }
+     .selected {
+       border: 2px solid gold;
+     }
 
-    img {
-      max-width: 100px;
-      background-color: black;
-    }
-  }
-}
+     img {
+       max-width: 100px;
+       background-color: black;
+     }
+   }
+ }
 
-.description {
-  max-width: 75%;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 14px;
-  margin-bottom: 30px;
-}
+ .description {
+   max-width: 75%;
+   margin: 0 auto;
+   text-align: center;
+   margin-top: 14px;
+   margin-bottom: 30px;
+ }
 </style>
